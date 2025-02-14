@@ -1,0 +1,51 @@
+ldc array
+stl 0
+ldc 5
+stl 1
+outerLoop: ldl 1
+brz end
+ldl 1
+stl 3
+ldc array
+stl 5
+innerLoop: ldl 3
+adc -1
+brz end1
+ldl 0
+adc 1
+ldnl 0
+ldl 0
+ldnl 0
+sub
+brlz loop2
+ldl 0
+ldnl 0
+stl 4
+ldl 0
+adc 1
+ldnl 0
+ldl 0
+stnl 0
+ldl 4
+ldl 0
+adc 1
+stnl 0
+loop2: ldl 3
+adc -1
+stl 3
+ldl 0
+adc 1
+stl 0
+br innerLoop
+end1: ldl 1
+adc -1
+stl 1
+ldc array
+stl 0
+br outerLoop
+end: HALT
+array: data 5
+data 2
+data 1
+data 3
+data 4

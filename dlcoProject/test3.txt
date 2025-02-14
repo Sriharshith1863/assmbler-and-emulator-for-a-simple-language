@@ -1,0 +1,11 @@
+        ldc 5             ; Load constant 5
+        stl 0             ; Store at SP + 0
+        br startLoop      ; Undefined label `startLoop`
+        add 10            ; Incorrect operand for `add` (should not have an operand)
+        ldc               ; Missing operand for `ldc`
+        brlz missingLabel ; Undefined label `missingLabel`
+        adc               ; Missing operand for `adc`
+        ldl 1 extraOp     ; Extra operand for `ldl`
+        call func         ; Call to undefined subroutine `func`
+        return            ; Return without a preceding `call`
+        HALT

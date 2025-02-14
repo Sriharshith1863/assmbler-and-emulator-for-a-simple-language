@@ -1,0 +1,16 @@
+=> Assembler
+-> reads into an internal form on first pass.
+-> Diagnoses label errors (duplicate, missing, etc).
+-> Produces listing file with address machine code and source code with substituted label values
+-> Has a table of instruction names and expected operands.
+-> Assembles test program.
+-> Additional test programs for both failure and success
+
+-> Bubble sort program
+-> assembles, Works
+
+=> Emulator
+-> Loads object file
+-> Produces memory dump
+-> Executes test program
+-> Detects errant programs
